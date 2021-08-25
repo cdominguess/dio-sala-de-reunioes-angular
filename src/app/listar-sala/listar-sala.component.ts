@@ -14,15 +14,14 @@ export class ListarSalaComponent implements OnInit {
 
     salas: Observable<Sala[]>;
 
-    constructor(private salaService: SalaService, private router: Router) {
+    constructor(private salaService: SalaService, private router: Router) { }
 
-    }
-
-    ngOnInit(): void {
+    ngOnInit() {
         this.listar();
     }
 
     listar() {
+        console.log('dentro do listar salas');
         this.salas = this.salaService.listar();
     }
 
