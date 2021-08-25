@@ -1,1 +1,20 @@
-<p>detalhes-sala works!</p>
+<h3>Detalhes da Sala</h3>
+<hr />
+
+<div *ngIf="sala">
+    <div>
+        <label><b>Nome</b></label> {{sala.nome}}
+    </div>
+    <div>
+        <label><b>Fim</b></label> {{sala.dataReuniao}}
+    </div>
+    <div>
+        <label><b>Início</b></label> {{sala.horaInicial}}
+    </div>
+    <div>
+        <label><b>Fim</b></label> {{sala.horaFinal}}
+    </div>
+</div>
+
+<br /><br />
+<button (click)="irParaListagem()" class="btn btn-primary">Voltar para a listagem</button><br>

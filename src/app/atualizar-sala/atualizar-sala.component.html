@@ -1,1 +1,28 @@
-<p>atualizar-sala works!</p>
+<h3>Atualizar Sala</h3>
+<hr />
+
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="nome" required [(ngModel)]="sala.nome" name="nome" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">Data</label>
+            <input type="text" class="form-control" id="dataReuniao" required [(ngModel)]="sala.dataReuniao" name="dataReuniao" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">Início</label>
+            <input type="text" class="form-control" id="horaInicial" required [(ngModel)]="sala.horaInicial" name="horaInicial" />
+        </div>
+
+        <div class="form-group">
+            <label for="name">Fim</label>
+            <input type="text" class="form-control" id="horaFinal" required [(ngModel)]="sala.horaFinal" name="horaFinal" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

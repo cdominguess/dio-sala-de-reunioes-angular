@@ -1,1 +1,30 @@
-<p>listar-sala works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>Listagem de salas</h2>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Reunião</th>
+                    <th>Hora Inicial</th>
+                    <th>Hora Final</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let sala of salas | async">
+                    <td>{{sala.nome}}</td>
+                    <td>{{sala.dataReuniao}}</td>
+                    <td>{{sala.horaInicial}}</td>
+                    <td>{{sala.horaFinal}}</td>
+                    <td><button (click)="excluir(sala.id)" class="btn btn-danger">Excluir</button>
+                        <button (click)="atualizar(sala.id)" class="btn btn-info" style="margin-left: 10px">Atualizar</button>
+                        <button (click)="detalhes(sala.id)" class="btn btn-info" style="margin-left: 10px">Detalhes</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
