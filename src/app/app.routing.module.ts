@@ -7,7 +7,6 @@ import { DetalhesSalaComponent } from './detalhes-sala/detalhes-sala.component';
 import { ListarSalaComponent } from './listar-sala/listar-sala.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/', pathMatch: 'full' },
     { path: 'salas', component: ListarSalaComponent },
     { path: 'adicionar', component: CriarSalaComponent },
     { path: 'atualizar/:id', component: AtualizarSalaComponent },

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
-import { DetalhesSalaComponent } from '../detalhes-sala/detalhes-sala.component';
 import { Sala } from '../sala';
 import { SalaService } from '../sala.service';
 
@@ -28,7 +27,7 @@ export class ListarSalaComponent implements OnInit {
     }
 
     excluir(id: number) {
-        this.salaService.excluir(id).subscrible(
+        this.salaService.excluir(id).subscribe(
             resultado => {
                 console.log(resultado);
                 this.listar();

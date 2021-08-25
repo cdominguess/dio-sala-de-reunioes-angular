@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+/**
+ * Classe responsável pela comunicação com o backend.
+ * Cada componente  de listar, criar, etc SEMPRE terá injetado no contructor esta classe e depois chamará o respectivo método
+ */
 @Injectable({ providedIn: 'root' })
 export class SalaService {
 
